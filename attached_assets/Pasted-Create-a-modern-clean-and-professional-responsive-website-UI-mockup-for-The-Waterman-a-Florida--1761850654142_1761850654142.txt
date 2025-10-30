@@ -1,0 +1,101 @@
+Create a modern, clean, and professional responsive website UI mockup for “The Waterman”, a Florida-based water treatment company. The design should reflect trust, purity, and quality with a blue and white color palette symbolizing clean water.
+
+Project Type: Frontend UI (HTML, CSS, JS)
+
+Design Style:
+
+Modern, minimal, and professional
+
+Smooth transitions and clean typography
+
+Focused on clarity and easy navigation
+
+Use elegant water-related visuals (waves, ripples, droplets)
+
+Include icons and images that represent clean water, filtration, and freshness
+
+Structure:
+
+Header Section (Sticky Navbar)
+
+Logo (The Waterman)
+
+Navigation: Home | Water Treatment | Location | Contact
+
+Call-to-Action Button: “Call Us Today!”
+
+Display contact info: 📞 (321) 951-1303 | ✉️ thewaterman321@gmail.com
+
+Hero Section
+
+Large hero image of clean water or family with water glass
+
+Headline: “WATER SYSTEMS, PRODUCTS & TREATMENT IN PALM BAY, FL”
+
+Subtext: “Since 1987, The Waterman has provided the highest quality water treatment systems at the best prices.”
+
+CTA Buttons: “Get Free Water Analysis” & “Call Now”
+
+About / Intro Section
+
+Title: “Why Pay More? Call Us Today for All Your Water Needs!”
+
+Paragraph: Brief history — family-owned since 1987, serving Brevard, Indian County, Palm Bay, Melbourne, and nearby areas.
+
+Add supporting visuals or icons (water softeners, tanks, filters).
+
+Services Section
+
+Title: “Our Water Treatment Services Include”
+
+Grid layout with service cards:
+
+Water Softeners
+
+Pressure Tanks
+
+Air Induction Oxidizers
+
+Reverse Osmosis Systems
+
+Pool Supplies
+
+Chlorine Refills
+
+Each card with an icon, short description, and “Learn More” button.
+
+What We Remove Section
+
+Title: “We Remove”
+
+Icons/illustrations for: Chlorine, Iron Rust, Odor, Stains, Tannic Acid, Deposits
+
+Contact Section
+
+Title: “Contact Us”
+
+Address: 1155 Malabar Rd. NE, Suite 20, Palm Bay, FL 32907
+
+Hours of operation
+
+Contact form (Name, Phone, Email, Subject, Comments)
+
+Map Embed Placeholder
+
+Footer
+
+Quick Links (Home | Water Treatment | Location | Contact)
+
+Social Media Icons (optional)
+
+Copyright © 2025 The Waterman Inc. | Terms of Use | Privacy Policy
+
+Design Notes:
+
+Use light blue gradients and water textures subtly in backgrounds.
+
+Use rounded buttons and cards with soft shadows.
+
+Ensure the layout looks great on desktop, tablet, and mobile.
+
+Keep it SEO-friendly with semantic HTML tags.
