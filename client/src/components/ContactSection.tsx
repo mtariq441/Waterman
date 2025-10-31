@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import mapImage from "@assets/image_1761917346217.png";
 
 export default function ContactSection() {
   const { toast } = useToast();
@@ -111,11 +112,22 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-muted border-l-4 border-accent">
+            <Card className="bg-muted border-l-4 border-accent overflow-hidden">
               <CardContent className="pt-4 sm:pt-6">
-                <div className="aspect-video bg-background rounded-md flex items-center justify-center text-muted-foreground border border-border" data-testid="map-placeholder">
-                  <MapPin className="h-12 w-12 sm:h-16 sm:w-16" />
-                </div>
+                <a 
+                  href="https://www.google.com/maps/place/1155+Malabar+Rd+NE+%2320,+Palm+Bay,+FL+32907" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block aspect-video bg-background rounded-md overflow-hidden border border-border hover:opacity-90 transition-opacity"
+                  data-testid="map-link"
+                >
+                  <img 
+                    src={mapImage} 
+                    alt="Map showing The Waterman location in Palm Bay, FL" 
+                    className="w-full h-full object-cover"
+                    data-testid="map-image"
+                  />
+                </a>
               </CardContent>
             </Card>
           </div>
