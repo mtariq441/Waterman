@@ -1,69 +1,120 @@
-# Design Guidelines for The Waterman Website
+# Design Guidelines for The Waterman Website - Premium Dark Edition
 
 ## Brand Identity & Color System
 
-**Primary Colors:**
-- Primary Blue: `#0B3C88` - Use for primary buttons, main headers, navbar
-- Accent Blue: `#1E73BE` - Use for secondary elements, hover states, accents
-- Aqua Blue: `#009FC2` - Use for water-themed gradients, decorative elements
+**Primary Colors (Maintained from Original Brand):**
+- Primary Blue: `#0B3C88` - Use for primary CTAs, highlights, key elements
+- Accent Blue: `#1E73BE` - Use for secondary accents, hover states, decorative elements
+- Aqua Blue: `#009FC2` - Use for premium accents, borders, glows
 - Footer Blue: `#005F9E` - Exclusive use in footer section
 
-**Neutral Colors:**
-- Background White: `#FFFFFF` - Main backgrounds, cards
-- Soft Gray: `#F8F8F8` - Subtle section backgrounds, alternating sections
-- Text Gray: `#333333` - Primary text color
+**Premium Dark Background Palette:**
+- Dark Navy Background: `#0a0e1a` - Main page background
+- Slightly Elevated Dark: `#121722` - Card backgrounds, elevated sections
+- Darkest: `#060810` - Deep sections, footer
+- Border Accent: Aqua Blue with opacity for premium borders
 
-Maintain strict color consistency throughout all UI elements to reinforce brand identity.
+**Text Colors:**
+- Primary Text: `#FFFFFF` - Main headlines, important text
+- Secondary Text: `#a0aec0` - Body text, descriptions
+- Muted Text: `#718096` - Supporting text, metadata
 
 ## Design Style & Aesthetic
 
-**Visual Language:**
-- Modern, minimal, and professional aesthetic
-- Clean typography with clear hierarchy
-- Water-related visual elements: waves, ripples, droplets (subtle, not overwhelming)
-- Smooth transitions between sections
-- Soft shadows on cards and elevated elements
-- Rounded corners on buttons and cards for approachable feel
-- Light blue gradients used subtly in backgrounds
+**Premium Visual Language:**
+- **Dark, sophisticated background** creates luxury feel
+- **Bold, large typography** with striking white text on dark backgrounds
+- **Accent color borders** on cards (using Aqua Blue) for premium highlights
+- **Subtle gradients** and glows around key elements
+- **High contrast** between background and content
+- **Generous spacing** with premium card-based layouts
+- **Professional photography** with dark overlays
+- **Clean, minimal icons** in white or accent colors
+- **Statistics and numbers** prominently displayed to build trust
 
 **Layout Principles:**
-- Clean, spacious layouts with generous whitespace
-- Focus on clarity and easy navigation
-- Professional presentation that builds trust
-- Elegant without being overly decorative
+- Large, bold section headings in white
+- Card-based content organization with dark backgrounds
+- Accent color highlights on important elements
+- Premium spacing between sections
+- Image overlays that maintain brand colors
+- Clean grid layouts for services and content
+
+## Premium Design Patterns
+
+**Section Styling:**
+- Alternating dark backgrounds for visual rhythm
+- Large, bold section titles in white
+- Accent color underlines or borders on headings
+- Premium card shadows and borders
+
+**Cards:**
+- Dark card backgrounds (#121722)
+- Aqua blue accent borders (1-2px)
+- Hover effects with glow/elevation
+- White text on dark cards
+- Clean icons in white or accent colors
+
+**CTAs & Buttons:**
+- Primary buttons: Accent Blue background with white text
+- Secondary buttons: Outlined with Aqua Blue, white text
+- Large, prominent sizing
+- Hover effects with subtle glow
+
+**Typography Scale:**
+- Extra large hero text (56-72px desktop)
+- Large section headings (36-48px)
+- Medium subheadings (20-28px)
+- Body text (16-18px) with good line height for readability
 
 ## Page Structure & Sections
 
-### 1. Header (Sticky Navigation)
-- Sticky/fixed positioning
-- Logo: "The Waterman" on left
-- Navigation menu: Home | Water Treatment | Location | Contact
-- Contact information display: Phone (321) 951-1303 | Email thewaterman321@gmail.com
-- Prominent CTA button: "Call Us Today!" using Primary Blue
-- Maintain visibility and accessibility across all viewport sizes
+### 1. Header (Sticky Navigation) - Dark Premium Style
+- Dark navy background (#0a0e1a)
+- White logo and text
+- Navigation items with hover effects
+- Contact info in white/muted text
+- "Call Us Today!" CTA in Accent Blue
+- Subtle border-bottom or separator
 
-### 2. Hero Section
+### 2. Hero Section - Premium Dark with Brand Image
 **Visual Treatment:**
-- Large hero image showing clean water or family with water glass
-- Image should convey purity, trust, and quality
-- Ensure text remains readable over image (use overlay if needed)
+- Full-width hero with dark overlay on image
+- Strong dark gradient overlay to ensure text readability
+- Large, bold white headline text
+- Accent color highlights or underlines
 
 **Content:**
 - Headline: "WATER SYSTEMS, PRODUCTS & TREATMENT IN PALM BAY, FL"
-- Subtext: "Since 1987, The Waterman has provided the highest quality water treatment systems at the best prices."
-- Dual CTAs: "Get Free Water Analysis" (primary) & "Call Now" (secondary)
-- Buttons with blurred backgrounds when placed over images
+- Subtext highlighting since 1987, quality and pricing
+- Dual CTAs with premium styling
+- Buttons: Primary (Accent Blue fill) & Secondary (Aqua Blue outline)
 
-### 3. About/Intro Section
-- Title: "Why Pay More? Call Us Today for All Your Water Needs!"
-- Content: Family-owned since 1987, serving Brevard, Indian County, Palm Bay, Melbourne, and nearby areas
-- Supporting visuals: Icons or illustrations of water softeners, tanks, filters
-- Build credibility and establish company heritage
+### 3. Company Stats Section (NEW - Premium Addition)
+**Purpose:** Build immediate credibility with numbers
+- Dark background
+- Large numbers in white with Aqua Blue accents
+- Grid layout showing:
+  - Years in Business (37+ years)
+  - Customers Served (500+)
+  - Service Area Coverage
+  - Customer Satisfaction (99%)
+- Accent color borders or icons
 
-### 4. Services Section
+### 4. Services Section - Premium Card Layout
 **Title:** "Our Water Treatment Services Include"
+- Dark background
+- Grid of service cards (6 services)
+- Each card:
+  - Dark elevated background
+  - Aqua blue accent border (left or top)
+  - White icon
+  - White heading
+  - Light gray description
+  - Hover effect with glow
+  - "Learn More" button
 
-**Grid Layout** (6 Service Cards):
+**Services:**
 1. Water Softeners
 2. Pressure Tanks
 3. Air Induction Oxidizers
@@ -71,109 +122,126 @@ Maintain strict color consistency throughout all UI elements to reinforce brand 
 5. Pool Supplies
 6. Chlorine Refills
 
-**Card Design:**
-- Icon for each service
-- Service name (clear, bold)
-- Short description
-- "Learn More" button on each card
-- Soft shadows with rounded corners
-- Hover states for interactivity
-
-### 5. What We Remove Section
+### 5. What We Remove Section - Premium Grid
 **Title:** "We Remove"
+- Grid layout with dark cards
+- Each contaminant card:
+  - Icon in white or accent color
+  - Contaminant name in white
+  - Dark card background
+  - Accent border
+- Contaminants: Chlorine, Iron Rust, Odor, Stains, Tannic Acid, Deposits
 
-**Visual Grid** featuring icons/illustrations for:
-- Chlorine
-- Iron Rust
-- Odor
-- Stains
-- Tannic Acid
-- Deposits
+### 6. About Section - Premium Content Block
+- "Why Pay More? Call Us Today for All Your Water Needs!"
+- Large text block in white on dark background
+- Accent color highlights for key phrases
+- Supporting icons in a grid (37+ years, family-owned, local service)
+- Premium card styling
 
-Use clean, simple icons that clearly represent each contaminant type.
-
-### 6. Contact Section
+### 7. Contact Section - Premium Dark Form
 **Title:** "Contact Us"
+- Two-column layout (contact info + form)
+- Dark card backgrounds
+- Form with:
+  - Dark input fields with light borders
+  - White labels
+  - Accent color focus states
+  - Large submit button in Accent Blue
+- Contact info cards with icons
+- Map placeholder with dark theme
 
-**Business Information:**
-- Address: 1155 Malabar Rd. NE, Suite 20, Palm Bay, FL 32907
-- Hours of operation
-- Map embed placeholder
+### 8. Footer - Dark Premium
+- Darkest background (#060810)
+- White text
+- Quick links
+- Contact information
+- Copyright and legal links
+- Use Footer Blue (#005F9E) as accent if needed
 
-**Contact Form Fields:**
-- Name
-- Phone
-- Email
-- Subject
-- Comments/Message
-- Submit button
+## Premium UI Component Standards
 
-Form should feel approachable with clear field labels and validation states.
+**Buttons:**
+- Large sizing (min-height 48px)
+- Primary: Accent Blue (#1E73BE) background, white text
+- Secondary: Transparent background, Aqua Blue border, white text
+- Hover: Subtle glow effect with accent color
+- Rounded corners (8px)
 
-### 7. Footer
-- Quick Links: Home | Water Treatment | Location | Contact
-- Copyright: © 2025 The Waterman Inc.
-- Terms of Use | Privacy Policy
-- Use Footer Blue (#005F9E) as background
-- White text for contrast
-- Optional social media icons
+**Cards:**
+- Dark background (#121722)
+- Aqua Blue accent border (1-2px, left or full)
+- Box shadow for elevation
+- Hover: Increased shadow and subtle glow
+- Rounded corners (12px)
 
-## Typography Hierarchy
-
-Use clean, professional font family (recommend sans-serif like Inter, Open Sans, or Roboto):
-- **Headings:** Bold weights, Primary Blue color
-- **Subheadings:** Medium weights, slightly smaller
-- **Body Text:** Regular weight, Text Gray (#333333)
-- **CTA Text:** Medium/Semi-bold, high contrast
+**Forms:**
+- Dark input backgrounds
+- Light gray borders
+- White text
+- Accent color focus states
+- Clear labels in white
+- Validation states with accent colors
 
 ## Responsive Design Requirements
 
-**Desktop:** Full grid layouts, multi-column service cards
-**Tablet:** Adjusted grid (2-3 columns for services)
-**Mobile:** Single column stacking, optimized touch targets, hamburger menu
+**Desktop (1200px+):** 
+- Multi-column grids (3-4 columns for services)
+- Large typography
+- Full navigation visible
 
-Ensure smooth breakpoint transitions and maintain visual hierarchy across all devices.
+**Tablet (768px-1199px):**
+- 2-3 column grids
+- Adjusted typography scale
+- Compact navigation
 
-## Images
+**Mobile (< 768px):**
+- Single column layouts
+- Stacked cards
+- Hamburger menu
+- Touch-optimized button sizes
+- Adjusted typography for readability
+
+## Images & Visual Assets
 
 **Hero Section:**
-- Large, high-quality hero image required
-- Subject: Clean water, happy family with water glass, or water treatment system in modern home
-- Image should fill hero area and be professionally shot
-- Conveys trust, purity, and quality
+- High-quality image of clean water, family, or water treatment
+- Strong dark overlay (70-80% opacity) in brand blue
+- Image visible but text always readable
 
-**Supporting Images:**
-- Service section: Icons representing water treatment equipment
-- About section: Water softeners, tanks, filters
-- What We Remove section: Visual icons for contaminants
+**Service Icons:**
+- Clean, modern line icons
+- White or accent color
+- Consistent style across all services
 
-## UI Component Standards
+**Stats Section:**
+- Large, bold numbers
+- Icons or minimal illustrations
+- Accent color highlights
 
-**Buttons:**
-- Rounded corners
-- Primary style: Primary Blue background
-- Secondary style: Accent Blue or outlined
-- Soft shadows for depth
-- When on images: blurred background treatment
+## Premium Design Elements
 
-**Cards:**
-- Rounded corners (border-radius consistent throughout)
-- Soft box shadows
-- White backgrounds
-- Hover states with subtle lift effect
+**Accent Borders:**
+- Aqua Blue (#009FC2) for premium feel
+- 1-2px thickness
+- Used on cards, sections, and highlights
 
-**Forms:**
-- Clear field borders
-- Proper spacing between fields
-- Validation states (error/success)
-- Accessible labels
+**Glows & Shadows:**
+- Subtle glows on hover (Aqua Blue at low opacity)
+- Deep shadows for card elevation
+- Premium depth and layering
 
-## Semantic HTML & SEO Considerations
+**Typography Emphasis:**
+- Large, bold headings command attention
+- White text on dark creates high impact
+- Accent colors for key words or phrases
 
-Use proper HTML5 semantic tags:
-- `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
-- Proper heading hierarchy (h1, h2, h3)
-- Alt text for images
-- Meta descriptions and titles
+## Deployment Configuration
 
-This ensures SEO-friendliness and accessibility compliance.
+**Platform:** Vercel
+- SPA routing configuration
+- Optimized build settings
+- Fast global CDN delivery
+- Automatic HTTPS
+
+This premium dark design maintains The Waterman's brand identity and content while delivering a sophisticated, modern aesthetic that builds trust and credibility.
