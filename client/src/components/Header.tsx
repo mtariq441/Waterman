@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, Clock, Search } from "lucide-react";
 import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761915990636.png";
 
 export default function Header() {
@@ -16,135 +16,202 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md">
-      <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 bg-[#009FC2]">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 max-w-[1600px] mx-auto">
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            <img 
-              src={logoImage} 
-              alt="The Waterman Logo" 
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
-              data-testid="logo-header"
-            />
-          </div>
-
-          <nav className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
-              data-testid="link-home"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
-              data-testid="link-services"
-            >
-              Water Treatment
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
-              data-testid="link-location"
-            >
-              Location
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
-              data-testid="link-contact"
-            >
-              Contact
-            </button>
-          </nav>
-
-          <div className="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-4 flex-shrink-0">
-            <div className="hidden xl:flex items-center gap-3 text-xs text-white/90">
-              <a href="tel:3219511303" className="flex items-center gap-1.5 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-phone">
-                <Phone className="h-3.5 w-3.5 text-white" />
-                <span>(321) 951-1303</span>
-              </a>
-              <a href="mailto:thewaterman321@gmail.com" className="flex items-center gap-1.5 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-email">
-                <Mail className="h-3.5 w-3.5 text-white" />
-                <span>thewaterman321@gmail.com</span>
-              </a>
+      {/* Top Utility Bar */}
+      <div className="bg-[#0B3C88] text-white border-b border-white/10">
+        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-9 sm:h-10 text-xs sm:text-sm">
+            <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+              <div className="hidden sm:flex items-center gap-1.5 text-white/90">
+                <MapPin className="h-3.5 w-3.5" />
+                <span className="hidden md:inline">Palm Bay, FL 32907</span>
+                <span className="md:hidden">Palm Bay, FL</span>
+              </div>
+              <div className="hidden lg:flex items-center gap-1.5 text-white/90">
+                <Clock className="h-3.5 w-3.5" />
+                <span>Mon-Fri: 8AM-5PM</span>
+              </div>
             </div>
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs lg:text-sm whitespace-nowrap font-semibold px-3 lg:px-4"
-              data-testid="button-call-cta"
-            >
-              Call Us Today!
-            </Button>
-          </div>
-
-          <div className="flex items-center gap-2 md:hidden">
-            <a href="tel:3219511303" className="hidden sm:flex items-center hover-elevate p-2 rounded-md" data-testid="link-phone-mobile">
-              <Phone className="h-5 w-5 text-white" />
-            </a>
-            <button
-              className="p-2 hover-elevate rounded-md text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              data-testid="button-menu-toggle"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+              <a 
+                href="tel:3219511303" 
+                className="flex items-center gap-1.5 hover:text-[#009FC2] transition-colors"
+                data-testid="topbar-phone"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">(321) 951-1303</span>
+              </a>
+              <a 
+                href="mailto:thewaterman321@gmail.com" 
+                className="hidden md:flex items-center gap-1.5 hover:text-[#009FC2] transition-colors"
+                data-testid="topbar-email"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                <span className="hidden lg:inline">thewaterman321@gmail.com</span>
+              </a>
+              <div className="hidden sm:flex items-center gap-2 border-l border-white/20 pl-3 md:pl-4">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => scrollToSection("contact")}
+                  className="text-white hover:text-[#009FC2] hover:bg-white/10 h-7 px-2 md:px-3 text-xs font-medium"
+                  data-testid="topbar-quote-button"
+                >
+                  GET A QUOTE
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2 border-t border-white/20 pt-4" data-testid="mobile-menu">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover-elevate text-white"
-              data-testid="mobile-link-home"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover-elevate text-white"
-              data-testid="mobile-link-services"
-            >
-              Water Treatment
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover-elevate text-white"
-              data-testid="mobile-link-location"
-            >
-              Location
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover-elevate text-white"
-              data-testid="mobile-link-contact"
-            >
-              Contact
-            </button>
-            <div className="pt-2 space-y-2 border-t border-white/20">
-              <a href="tel:3219511303" className="flex items-center gap-2 px-3 py-2 text-sm hover-elevate rounded-md text-white/90" data-testid="mobile-link-phone">
-                <Phone className="h-4 w-4 text-white" />
-                <span>(321) 951-1303</span>
-              </a>
-              <a href="mailto:thewaterman321@gmail.com" className="flex items-center gap-2 px-3 py-2 text-sm hover-elevate rounded-md break-all text-white/90" data-testid="mobile-link-email">
-                <Mail className="h-4 w-4 flex-shrink-0 text-white" />
-                <span>thewaterman321@gmail.com</span>
-              </a>
+      {/* Main Navigation Bar */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+            {/* Logo */}
+            <div className="flex items-center flex-shrink-0">
+              <button 
+                onClick={() => scrollToSection("home")}
+                className="focus:outline-none focus:ring-2 focus:ring-[#009FC2] rounded-md"
+                data-testid="logo-button"
+              >
+                <img 
+                  src={logoImage} 
+                  alt="The Waterman Logo" 
+                  className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto object-contain hover:opacity-90 transition-opacity"
+                  data-testid="logo-header"
+                />
+              </button>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+              <button
+                onClick={() => scrollToSection("home")}
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-all uppercase tracking-wide"
+                data-testid="link-home"
+              >
+                HOME
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-all uppercase tracking-wide"
+                data-testid="link-services"
+              >
+                WATER TREATMENT
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-all uppercase tracking-wide"
+                data-testid="link-about"
+              >
+                ABOUT
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-all uppercase tracking-wide"
+                data-testid="link-location"
+              >
+                LOCATION
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="px-3 xl:px-4 py-2 text-sm xl:text-base font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-all uppercase tracking-wide"
+                data-testid="link-contact"
+              >
+                CONTACT
+              </button>
+            </nav>
+
+            {/* Desktop Right Actions */}
+            <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+              <button 
+                className="p-2 text-gray-600 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors"
+                data-testid="search-button"
+              >
+                <Search className="h-5 w-5" />
+              </button>
               <Button
                 variant="default"
                 size="default"
                 onClick={() => scrollToSection("contact")}
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-                data-testid="button-call-cta-mobile"
+                className="bg-[#009FC2] text-white hover:bg-[#008AB0] text-sm xl:text-base font-semibold px-4 xl:px-6 h-10 xl:h-11 shadow-md hover:shadow-lg transition-all"
+                data-testid="button-call-cta"
               >
-                Call Us Today!
+                FREE ANALYSIS
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <button 
+                className="p-2 text-gray-600 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors"
+                data-testid="mobile-search-button"
+              >
+                <Search className="h-5 w-5" />
+              </button>
+              <button
+                className="p-2 text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                data-testid="button-menu-toggle"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
-        )}
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="lg:hidden pb-4 space-y-1 border-t border-gray-200 pt-4" data-testid="mobile-menu">
+              <button
+                onClick={() => scrollToSection("home")}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors uppercase tracking-wide"
+                data-testid="mobile-link-home"
+              >
+                HOME
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors uppercase tracking-wide"
+                data-testid="mobile-link-services"
+              >
+                WATER TREATMENT
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors uppercase tracking-wide"
+                data-testid="mobile-link-about"
+              >
+                ABOUT
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors uppercase tracking-wide"
+                data-testid="mobile-link-location"
+              >
+                LOCATION
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#009FC2] hover:bg-gray-50 rounded-md transition-colors uppercase tracking-wide"
+                data-testid="mobile-link-contact"
+              >
+                CONTACT
+              </button>
+              <div className="pt-3 mt-3 border-t border-gray-200">
+                <Button
+                  variant="default"
+                  size="default"
+                  onClick={() => scrollToSection("contact")}
+                  className="w-full bg-[#009FC2] text-white hover:bg-[#008AB0] font-semibold shadow-md"
+                  data-testid="button-call-cta-mobile"
+                >
+                  GET FREE WATER ANALYSIS
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
