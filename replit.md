@@ -9,7 +9,7 @@ Premium dark-themed website for The Waterman, a Florida-based water treatment co
 - **UI Components**: Shadcn UI component library
 - **Icons**: Lucide React
 - **Build Tool**: Vite
-- **Backend**: Express.js (serves the frontend in production)
+- **Deployment**: Static site (no backend)
 
 ## Design System
 
@@ -84,26 +84,27 @@ The application will be available at `http://localhost:5000`
 npm run build
 ```
 
+This generates static files in the `dist/public/` directory.
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
 ## Deployment
 
-### Vercel Deployment
-The website is configured for deployment on Vercel:
+### Static Site Deployment
+This is a static React application that can be deployed to any static hosting service:
 
-1. **Automatic Setup**: Connect your GitHub repository to Vercel
-2. **Build Configuration**: 
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-3. **Configuration File**: `vercel.json` is included for SPA routing and headers
+**Replit Deployment:**
+1. Use the "Publish" button in Replit to deploy your static site
+2. Build command: `npm run build`
+3. Output directory: `dist/public`
 
-The `vercel.json` file includes:
-- SPA routing configuration (all routes redirect to index.html)
-- Security headers (X-Content-Type-Options, X-Frame-Options, X-XSS-Protection)
-- Asset caching for optimal performance
-
-### Manual Deployment Steps
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel` in the project directory
-3. Follow the prompts to deploy
+**Other Static Hosts (Netlify, Vercel, etc.):**
+1. Build Command: `npm run build`
+2. Output Directory: `dist/public`
+3. No special configuration needed - the site is a pure SPA
 
 ## Project Structure
 ```
@@ -126,11 +127,8 @@ client/
 ├── attached_assets/     # Generated hero image
 └── public/             # Static assets
 
-server/
-└── index.ts            # Express server
-
 design_guidelines.md    # Comprehensive design documentation
-vercel.json            # Vercel deployment configuration
+dist/                   # Build output (generated)
 ```
 
 ## Key Features
@@ -158,6 +156,14 @@ vercel.json            # Vercel deployment configuration
 
 ## Recent Changes
 
+### Migration to Static Site (Latest)
+- Converted from full-stack Express + React to static frontend-only
+- Removed all backend code (server/, shared/ directories)
+- Removed database dependencies (Drizzle, Neon)
+- Updated build configuration for static deployment
+- Site now deployable to any static hosting service
+- Build output: `dist/public/` directory
+
 ### Premium Dark Design Implementation
 - Migrated from light theme to premium dark theme
 - Updated all components with new color system
@@ -165,7 +171,6 @@ vercel.json            # Vercel deployment configuration
 - Enhanced typography with larger, bolder headings
 - Implemented accent color system for highlights
 - Added glow and elevation effects
-- Created Vercel deployment configuration
 
 ### Component Updates
 All components redesigned to match premium dark aesthetic:
