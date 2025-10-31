@@ -4,6 +4,7 @@ import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhatWeRemoveSection from "@/components/WhatWeRemoveSection";
 import AboutSection from "@/components/AboutSection";
+import PartnersSection from "@/components/PartnersSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <ServicesSection />
         <WhatWeRemoveSection />
         <AboutSection />
+        <PartnersSection />
         <ContactSection />
       </main>
       <Footer />
