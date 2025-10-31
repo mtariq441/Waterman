@@ -156,21 +156,25 @@ dist/                   # Build output (generated)
 
 ## Recent Changes
 
-### Migration to Static Site (Latest)
+### Brand Redesign to Light Theme (Latest - 2025)
+- **Complete theme conversion** from dark to light matching client's brand
+- **Applied authentic brand colors:**
+  - Primary Blue (#0B3C88) for headings and primary elements
+  - Aqua Blue (#009FC2) for navigation bar and accents
+  - Accent Blue (#1E73BE) for call-to-action buttons
+  - Footer Blue (#005F9E) for footer
+- **Professional stock imagery** for water treatment industry
+- **Light, clean design** with white backgrounds and blue accents
+- **Proper contrast** for accessibility and readability
+
+### Migration to Static Site
 - Converted from full-stack Express + React to static frontend-only
 - Removed all backend code (server/, shared/ directories)
 - Removed database dependencies (Drizzle, Neon)
 - Updated build configuration for static deployment
 - Site now deployable to any static hosting service
 - Build output: `dist/public/` directory
-
-### Premium Dark Design Implementation
-- Migrated from light theme to premium dark theme
-- Updated all components with new color system
-- Added StatsSection component for credibility
-- Enhanced typography with larger, bolder headings
-- Implemented accent color system for highlights
-- Added glow and elevation effects
+- **Vercel deployment ready** with proper configuration
 
 ### Component Updates
 All components redesigned to match premium dark aesthetic:
