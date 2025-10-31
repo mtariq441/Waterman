@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761915990636.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,67 +17,70 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md">
       <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 bg-[#009FC2]">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 max-w-[1600px] mx-auto">
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white whitespace-nowrap">
-              The <span className="text-white">Waterman</span>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="The Waterman Logo" 
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
+              data-testid="logo-header"
+            />
           </div>
 
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6">
             <button
               onClick={() => scrollToSection("home")}
-              className="hover-elevate px-3 py-2 rounded-md text-sm font-medium transition-colors text-white whitespace-nowrap"
+              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
               data-testid="link-home"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="hover-elevate px-3 py-2 rounded-md text-sm font-medium transition-colors text-white whitespace-nowrap"
+              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
               data-testid="link-services"
             >
               Water Treatment
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="hover-elevate px-3 py-2 rounded-md text-sm font-medium transition-colors text-white whitespace-nowrap"
+              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
               data-testid="link-location"
             >
               Location
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="hover-elevate px-3 py-2 rounded-md text-sm font-medium transition-colors text-white whitespace-nowrap"
+              className="hover-elevate px-2 lg:px-3 py-2 rounded-md text-xs lg:text-sm font-medium transition-colors text-white whitespace-nowrap"
               data-testid="link-contact"
             >
               Contact
             </button>
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4 flex-shrink-0">
-            <div className="hidden xl:flex items-center gap-4 text-sm text-white/90">
-              <a href="tel:3219511303" className="flex items-center gap-2 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-phone">
-                <Phone className="h-4 w-4 text-white" />
+          <div className="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-4 flex-shrink-0">
+            <div className="hidden xl:flex items-center gap-3 text-xs text-white/90">
+              <a href="tel:3219511303" className="flex items-center gap-1.5 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-phone">
+                <Phone className="h-3.5 w-3.5 text-white" />
                 <span>(321) 951-1303</span>
               </a>
-              <a href="mailto:thewaterman321@gmail.com" className="flex items-center gap-2 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-email">
-                <Mail className="h-4 w-4 text-white" />
+              <a href="mailto:thewaterman321@gmail.com" className="flex items-center gap-1.5 hover-elevate px-2 py-1 rounded-md whitespace-nowrap transition-colors hover:text-white" data-testid="link-email">
+                <Mail className="h-3.5 w-3.5 text-white" />
                 <span>thewaterman321@gmail.com</span>
               </a>
             </div>
             <Button
               variant="default"
-              size="default"
+              size="sm"
               onClick={() => scrollToSection("contact")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm whitespace-nowrap font-semibold"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs lg:text-sm whitespace-nowrap font-semibold px-3 lg:px-4"
               data-testid="button-call-cta"
             >
               Call Us Today!
             </Button>
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 md:hidden">
             <a href="tel:3219511303" className="hidden sm:flex items-center hover-elevate p-2 rounded-md" data-testid="link-phone-mobile">
               <Phone className="h-5 w-5 text-white" />
             </a>
@@ -91,7 +95,7 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden pb-4 space-y-2 border-t border-white/20 pt-4" data-testid="mobile-menu">
+          <div className="md:hidden pb-4 space-y-2 border-t border-white/20 pt-4" data-testid="mobile-menu">
             <button
               onClick={() => scrollToSection("home")}
               className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover-elevate text-white"

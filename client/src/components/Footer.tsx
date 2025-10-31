@@ -1,3 +1,5 @@
+import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761915990636.png";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -12,10 +14,13 @@ export default function Footer() {
     <footer className="bg-[#005F9E] text-white py-10 sm:py-12 md:py-14 border-t border-white/10" data-testid="footer">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-10">
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">
-              The <span className="text-[#009FC2]">Waterman</span>
-            </h3>
+          <div className="flex flex-col items-start">
+            <img 
+              src={logoImage} 
+              alt="The Waterman Logo" 
+              className="h-24 sm:h-28 md:h-32 w-auto object-contain mb-4 bg-white rounded-lg p-2"
+              data-testid="logo-footer"
+            />
             <p className="text-white/80 text-sm sm:text-base">
               Serving Brevard County with quality water treatment systems since 1987.
             </p>
