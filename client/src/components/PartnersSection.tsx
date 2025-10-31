@@ -14,7 +14,7 @@ export default function PartnersSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 max-w-4xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-14 md:gap-20 max-w-5xl mx-auto">
           <a 
             href="https://www.bbb.org/us/fl/palm-bay/profile/water-treatment-equipment/the-waterman-0733-90028299"
             target="_blank"
@@ -25,7 +25,7 @@ export default function PartnersSection() {
             <img 
               src={bbbLogo} 
               alt="BBB Accredited Business since September 2002" 
-              className="h-24 sm:h-28 md:h-32 w-auto"
+              className="h-32 sm:h-36 md:h-40 lg:h-44 w-auto"
               data-testid="img-bbb"
             />
           </a>
@@ -34,7 +34,7 @@ export default function PartnersSection() {
             <img 
               src={pentairLogo} 
               alt="Pentair Authorized Dealer" 
-              className="h-16 sm:h-20 md:h-24 w-auto"
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
               data-testid="img-pentair"
             />
           </div>
