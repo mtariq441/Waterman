@@ -1,53 +1,58 @@
-import { Droplets, Award, Users } from "lucide-react";
+import { Award, Clock, MapPin } from "lucide-react";
 
 export default function AboutSection() {
   const features = [
-    {
-      icon: Droplets,
-      title: "Quality Systems",
-      description: "Top-tier water treatment equipment"
+    { 
+      icon: Award, 
+      title: "37+ Years Experience", 
+      description: "Family-owned and operated since 1987" 
     },
-    {
-      icon: Award,
-      title: "Since 1987",
-      description: "Over 35 years of trusted service"
+    { 
+      icon: Clock, 
+      title: "Best Prices", 
+      description: "Highest quality at competitive rates" 
     },
-    {
-      icon: Users,
-      title: "Family Owned",
-      description: "Local business you can trust"
+    { 
+      icon: MapPin, 
+      title: "Local Service", 
+      description: "Serving Brevard & Indian River County" 
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-muted" data-testid="section-about">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background" data-testid="section-about">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6" data-testid="text-about-title">
-            Why Pay More? Call Us Today for All Your Water Needs!
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed" data-testid="text-about-description">
-            The Waterman is a family-owned business that has been serving Brevard County, Indian River County, Palm Bay, Melbourne, and nearby areas since 1987. We pride ourselves on providing the highest quality water treatment systems at competitive prices, backed by expert service and local support.
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6" data-testid="text-about-title">
+              WHY PAY <span className="text-accent">MORE?</span>
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-6 sm:mb-8" data-testid="text-about-description">
+              The Waterman is a family-owned business that has been serving Brevard County, Indian River County, Palm Bay, Melbourne, and nearby areas since 1987. We pride ourselves on providing the highest quality water treatment systems at competitive prices, backed by expert service and local support.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-accent font-semibold">
+              Call Us Today for All Your Water Needs!
+            </p>
+          </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={index}
-                className="text-center p-4 sm:p-6"
-                data-testid={`feature-${index}`}
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 mb-3 sm:mb-4">
-                  <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary" />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="text-center p-6 sm:p-8 rounded-md bg-card border border-border hover-elevate accent-glow-hover transition-all duration-300"
+                  data-testid={`feature-${index}`}
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-18 sm:h-18 rounded-full bg-accent/10 mb-4 sm:mb-5">
+                    <Icon className="h-8 w-8 sm:h-9 sm:w-9 text-accent" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
