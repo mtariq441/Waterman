@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MapPin, Clock, Search } from "lucide-react";
-import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761915990636.png";
+import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761917000287.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

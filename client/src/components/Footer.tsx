@@ -1,4 +1,4 @@
-import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761915990636.png";
+import logoImage from "@assets/Gemini_Generated_Image_w446baw446baw446_1761917000287.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
