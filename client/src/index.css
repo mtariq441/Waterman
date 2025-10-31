@@ -2,92 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE */
+/* PREMIUM DARK MODE */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(255,255,255, .15);
+  --badge-outline: rgba(255,255,255, .08);
 
   /* Automatic computation of border around primary / danger buttons */
-  --opaque-button-border-intensity: -8; /* In terms of percentages */
+  --opaque-button-border-intensity: 10; /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(30, 115, 190, .08);
+  --elevate-2: rgba(30, 115, 190, .15);
 
-  --background: 0 0% 100%;
+  /* Premium Dark Backgrounds */
+  --background: 220 40% 5%;  /* #0a0e1a - Dark navy background */
 
-  --foreground: 0 0% 20%;
+  --foreground: 210 20% 98%;  /* #ffffff - White text */
 
-  --border: 0 0% 89%;
+  --border: 215 25% 20%;  /* Subtle borders */
 
-  --card: 0 0% 97%;
+  --card: 220 30% 10%;  /* #121722 - Elevated card background */
 
-  --card-foreground: 0 0% 20%;
+  --card-foreground: 210 20% 98%;
 
-  --card-border: 0 0% 93%;
+  --card-border: 189 98% 38%;  /* Aqua blue accent border */
 
-  --sidebar: 0 0% 95%;
+  --sidebar: 220 35% 12%;
 
-  --sidebar-foreground: 0 0% 20%;
+  --sidebar-foreground: 210 20% 98%;
 
-  --sidebar-border: 0 0% 91%;
+  --sidebar-border: 215 25% 22%;
 
   --sidebar-primary: 216 88% 29%;
 
   --sidebar-primary-foreground: 216 88% 97%;
 
-  --sidebar-accent: 216 12% 88%;
+  --sidebar-accent: 216 12% 18%;
 
-  --sidebar-accent-foreground: 216 12% 25%;
+  --sidebar-accent-foreground: 216 12% 95%;
 
-  --sidebar-ring: 216 88% 29%;
+  --sidebar-ring: 203 89% 44%;
 
-  --popover: 0 0% 93%;
+  --popover: 220 30% 12%;
 
-  --popover-foreground: 0 0% 20%;
+  --popover-foreground: 210 20% 98%;
 
-  --popover-border: 0 0% 89%;
+  --popover-border: 215 25% 22%;
 
-  --primary: 216 88% 29%;
+  --primary: 203 89% 44%;  /* #1E73BE - Accent Blue for CTAs */
 
-  --primary-foreground: 216 88% 97%;
+  --primary-foreground: 210 20% 98%;
 
-  --secondary: 0 0% 90%;
+  --secondary: 220 25% 18%;
 
-  --secondary-foreground: 0 0% 20%;
+  --secondary-foreground: 210 20% 98%;
 
-  --muted: 216 8% 91%;
+  --muted: 220 20% 15%;
 
-  --muted-foreground: 216 8% 35%;
+  --muted-foreground: 215 15% 65%;  /* #a0aec0 - Secondary text */
 
-  --accent: 216 10% 89%;
+  --accent: 189 98% 38%;  /* #009FC2 - Aqua Blue for accents */
 
-  --accent-foreground: 216 10% 25%;
+  --accent-foreground: 210 20% 98%;
 
   --destructive: 0 72% 45%;
 
   --destructive-foreground: 0 72% 98%;
 
-  --input: 0 0% 75%;
-  --ring: 216 88% 29%;
-  --chart-1: 216 88% 29%;
-  --chart-2: 203 89% 44%;
-  --chart-3: 189 98% 38%;
+  --input: 220 25% 20%;
+  --ring: 203 89% 44%;
+  --chart-1: 203 89% 44%;
+  --chart-2: 189 98% 38%;
+  --chart-3: 216 88% 29%;
   --chart-4: 203 45% 60%;
   --chart-5: 216 60% 50%;
 
-  --font-sans: Open Sans, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --radius: .5rem; /* 8px */
-  --shadow-2xs: 0px 1px 2px 0px hsl(216 20% 20% / 0.05);
-  --shadow-xs: 0px 1px 3px 0px hsl(216 20% 20% / 0.08);
-  --shadow-sm: 0px 2px 4px 0px hsl(216 20% 20% / 0.06), 0px 1px 2px -1px hsl(216 20% 20% / 0.08);
-  --shadow: 0px 4px 6px -1px hsl(216 20% 20% / 0.08), 0px 2px 4px -1px hsl(216 20% 20% / 0.06);
-  --shadow-md: 0px 6px 12px -2px hsl(216 20% 20% / 0.10), 0px 3px 6px -2px hsl(216 20% 20% / 0.08);
-  --shadow-lg: 0px 10px 20px -4px hsl(216 20% 20% / 0.12), 0px 4px 8px -2px hsl(216 20% 20% / 0.08);
-  --shadow-xl: 0px 20px 30px -6px hsl(216 20% 20% / 0.14), 0px 8px 16px -4px hsl(216 20% 20% / 0.10);
-  --shadow-2xl: 0px 25px 50px -12px hsl(216 20% 20% / 0.18);
+  --radius: .75rem; /* 12px for premium feel */
+  --shadow-2xs: 0px 1px 2px 0px hsl(220 40% 3% / 0.4);
+  --shadow-xs: 0px 1px 3px 0px hsl(220 40% 3% / 0.5);
+  --shadow-sm: 0px 2px 4px 0px hsl(220 40% 3% / 0.4), 0px 1px 2px -1px hsl(220 40% 3% / 0.5);
+  --shadow: 0px 4px 8px -1px hsl(220 40% 3% / 0.6), 0px 2px 4px -1px hsl(220 40% 3% / 0.4);
+  --shadow-md: 0px 6px 16px -2px hsl(220 40% 3% / 0.7), 0px 3px 6px -2px hsl(220 40% 3% / 0.5);
+  --shadow-lg: 0px 10px 24px -4px hsl(220 40% 3% / 0.8), 0px 4px 8px -2px hsl(220 40% 3% / 0.6);
+  --shadow-xl: 0px 20px 32px -6px hsl(220 40% 3% / 0.9), 0px 8px 16px -4px hsl(220 40% 3% / 0.7);
+  --shadow-2xl: 0px 25px 50px -12px hsl(220 40% 3% / 1);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -122,89 +123,6 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
-.dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
-
-  --opaque-button-border-intensity: 9;  /* In terms of percentages */
-
-  /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
-
-  --background: 216 5% 12%;
-
-  --foreground: 216 5% 92%;
-
-  --border: 216 5% 22%;
-
-  --card: 216 5% 15%;
-
-  --card-foreground: 216 5% 92%;
-
-  --card-border: 216 5% 20%;
-
-  --sidebar: 216 5% 17%;
-
-  --sidebar-foreground: 216 5% 92%;
-
-  --sidebar-border: 216 5% 23%;
-
-  --sidebar-primary: 216 88% 29%;
-
-  --sidebar-primary-foreground: 216 88% 97%;
-
-  --sidebar-accent: 216 12% 22%;
-
-  --sidebar-accent-foreground: 216 12% 88%;
-
-  --sidebar-ring: 216 88% 50%;
-
-  --popover: 216 5% 20%;
-
-  --popover-foreground: 216 5% 92%;
-
-  --popover-border: 216 5% 26%;
-
-  --primary: 216 88% 29%;
-
-  --primary-foreground: 216 88% 97%;
-
-  --secondary: 216 5% 24%;
-
-  --secondary-foreground: 216 5% 92%;
-
-  --muted: 216 8% 18%;
-
-  --muted-foreground: 216 8% 75%;
-
-  --accent: 216 10% 21%;
-
-  --accent-foreground: 216 10% 88%;
-
-  --destructive: 0 72% 35%;
-
-  --destructive-foreground: 0 72% 98%;
-
-  --input: 216 5% 35%;
-  --ring: 216 88% 50%;
-  --chart-1: 216 88% 60%;
-  --chart-2: 203 89% 65%;
-  --chart-3: 189 98% 55%;
-  --chart-4: 203 60% 70%;
-  --chart-5: 216 70% 65%;
-
-  --shadow-2xs: 0px 1px 2px 0px hsl(216 20% 5% / 0.25);
-  --shadow-xs: 0px 1px 3px 0px hsl(216 20% 5% / 0.35);
-  --shadow-sm: 0px 2px 4px 0px hsl(216 20% 5% / 0.30), 0px 1px 2px -1px hsl(216 20% 5% / 0.35);
-  --shadow: 0px 4px 6px -1px hsl(216 20% 5% / 0.40), 0px 2px 4px -1px hsl(216 20% 5% / 0.30);
-  --shadow-md: 0px 6px 12px -2px hsl(216 20% 5% / 0.45), 0px 3px 6px -2px hsl(216 20% 5% / 0.35);
-  --shadow-lg: 0px 10px 20px -4px hsl(216 20% 5% / 0.50), 0px 4px 8px -2px hsl(216 20% 5% / 0.40);
-  --shadow-xl: 0px 20px 30px -6px hsl(216 20% 5% / 0.55), 0px 8px 16px -4px hsl(216 20% 5% / 0.45);
-  --shadow-2xl: 0px 25px 50px -12px hsl(216 20% 5% / 0.60);
-
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -213,29 +131,29 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
 }
 
-/**
- * Using the elevate system.
- * Automatic contrast adjustment.
- *
- * <element className="hover-elevate" />
- * <element className="active-elevate-2" />
- *
- * // Using the tailwind utility when a data attribute is "on"
- * <element className="toggle-elevate data-[state=on]:toggle-elevated" />
- * // Or manually controlling the toggle state
- * <element className="toggle-elevate toggle-elevated" />
- *
- * Elevation systems have to handle many states.
- * - not-hovered, vs. hovered vs. active  (three mutually exclusive states)
- * - toggled or not
- * - focused or not (this is not handled with these utilities)
- *
- * Even without handling focused or not, this is six possible combinations that
- * need to be distinguished from eachother visually.
- */
+/* Premium accent glow effect */
 @layer utilities {
+  .accent-glow {
+    box-shadow: 0 0 20px rgba(0, 159, 194, 0.2);
+  }
+
+  .accent-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(0, 159, 194, 0.3);
+  }
+
+  .accent-border-left {
+    border-left: 2px solid hsl(var(--accent));
+  }
+
+  .accent-border-top {
+    border-top: 2px solid hsl(var(--accent));
+  }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
