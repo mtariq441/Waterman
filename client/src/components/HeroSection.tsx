@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@assets/generated_images/Hero_image_clean_water_dd83177a.png";
+import heroImage from "@assets/stock_images/clean_water_pouring__b6e74cda.jpg";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -18,7 +18,7 @@ export default function HeroSection() {
           alt="Clean water treatment"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60"></div>
       </div>
 
       <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24">
@@ -28,12 +28,12 @@ export default function HeroSection() {
               Est. 1987 • Palm Bay, Florida
             </span>
           </div>
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-8 leading-tight text-foreground">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-8 leading-tight text-[#0B3C88]">
             WATER SYSTEMS,<br />
             PRODUCTS &<br />
             <span className="text-accent">TREATMENT</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-7 md:mb-8 lg:mb-10 text-muted-foreground max-w-3xl font-normal">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-7 md:mb-8 lg:mb-10 text-[#333333] max-w-3xl font-normal">
             Since 1987, The Waterman has provided the highest quality water treatment systems at the best prices. Serving Brevard County with excellence.
           </p>
           <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 md:gap-4 max-w-2xl">

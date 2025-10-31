@@ -2,12 +2,12 @@ import { Droplets, Flame, Wind, Stethoscope, Beaker, XCircle } from "lucide-reac
 
 export default function WhatWeRemoveSection() {
   const contaminants = [
-    { icon: Droplets, name: "Chlorine", color: "text-blue-400" },
-    { icon: Flame, name: "Iron Rust", color: "text-orange-500" },
-    { icon: Wind, name: "Odor", color: "text-green-400" },
-    { icon: Stethoscope, name: "Stains", color: "text-yellow-400" },
-    { icon: Beaker, name: "Tannic Acid", color: "text-purple-400" },
-    { icon: XCircle, name: "Deposits", color: "text-red-400" }
+    { icon: Droplets, name: "Chlorine", color: "text-[#009FC2]" },
+    { icon: Flame, name: "Iron Rust", color: "text-[#1E73BE]" },
+    { icon: Wind, name: "Odor", color: "text-[#0B3C88]" },
+    { icon: Stethoscope, name: "Stains", color: "text-[#009FC2]" },
+    { icon: Beaker, name: "Tannic Acid", color: "text-[#1E73BE]" },
+    { icon: XCircle, name: "Deposits", color: "text-[#0B3C88]" }
   ];
 
   return (

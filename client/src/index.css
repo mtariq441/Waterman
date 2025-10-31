@@ -2,93 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PREMIUM DARK MODE */
+/* THE WATERMAN - LIGHT THEME */
 :root {
-  --button-outline: rgba(255,255,255, .15);
-  --badge-outline: rgba(255,255,255, .08);
+  --button-outline: rgba(11, 60, 136, .15);
+  --badge-outline: rgba(11, 60, 136, .08);
 
   /* Automatic computation of border around primary / danger buttons */
   --opaque-button-border-intensity: 10; /* In terms of percentages */
 
   /* Backgrounds applied on top of other backgrounds when hovered/active */
-  --elevate-1: rgba(30, 115, 190, .08);
-  --elevate-2: rgba(30, 115, 190, .15);
+  --elevate-1: rgba(30, 115, 190, .05);
+  --elevate-2: rgba(30, 115, 190, .10);
 
-  /* Premium Dark Backgrounds */
-  --background: 220 40% 5%;  /* #0a0e1a - Dark navy background */
+  /* Light Theme Backgrounds */
+  --background: 0 0% 100%;  /* #FFFFFF - White background */
 
-  --foreground: 210 20% 98%;  /* #ffffff - White text */
+  --foreground: 0 0% 20%;  /* #333333 - Dark gray text */
 
-  --border: 215 25% 20%;  /* Subtle borders */
+  --border: 0 0% 88%;  /* #E0E0E0 - Light gray borders */
 
-  --card: 220 30% 10%;  /* #121722 - Elevated card background */
+  --card: 0 0% 100%;  /* #FFFFFF - White card background */
 
-  --card-foreground: 210 20% 98%;
+  --card-foreground: 0 0% 20%;  /* #333333 - Dark text on cards */
 
-  --card-border: 189 98% 38%;  /* Aqua blue accent border */
+  --card-border: 189 100% 38%;  /* #009FC2 - Aqua blue accent border */
 
-  --sidebar: 220 35% 12%;
+  --sidebar: 0 0% 98%;
 
-  --sidebar-foreground: 210 20% 98%;
+  --sidebar-foreground: 0 0% 20%;
 
-  --sidebar-border: 215 25% 22%;
+  --sidebar-border: 0 0% 88%;
 
-  --sidebar-primary: 216 88% 29%;
+  --sidebar-primary: 216 89% 29%;  /* #0B3C88 - Primary Blue */
 
-  --sidebar-primary-foreground: 216 88% 97%;
+  --sidebar-primary-foreground: 0 0% 100%;
 
-  --sidebar-accent: 216 12% 18%;
+  --sidebar-accent: 0 0% 96%;
 
-  --sidebar-accent-foreground: 216 12% 95%;
+  --sidebar-accent-foreground: 0 0% 20%;
 
-  --sidebar-ring: 203 89% 44%;
+  --sidebar-ring: 203 73% 44%;
 
-  --popover: 220 30% 12%;
+  --popover: 0 0% 100%;
 
-  --popover-foreground: 210 20% 98%;
+  --popover-foreground: 0 0% 20%;
 
-  --popover-border: 215 25% 22%;
+  --popover-border: 0 0% 88%;
 
-  --primary: 203 89% 44%;  /* #1E73BE - Accent Blue for CTAs */
+  --primary: 203 73% 44%;  /* #1E73BE - Accent Blue for CTAs */
 
-  --primary-foreground: 210 20% 98%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 220 25% 18%;
+  --secondary: 0 0% 96%;  /* #F5F5F5 - Light gray */
 
-  --secondary-foreground: 210 20% 98%;
+  --secondary-foreground: 0 0% 20%;
 
-  --muted: 220 20% 15%;
+  --muted: 0 0% 96%;  /* #F5F5F5 - Light gray background */
 
-  --muted-foreground: 215 15% 65%;  /* #a0aec0 - Secondary text */
+  --muted-foreground: 0 0% 45%;  /* #737373 - Medium gray text */
 
-  --accent: 189 98% 38%;  /* #009FC2 - Aqua Blue for accents */
+  --accent: 189 100% 38%;  /* #009FC2 - Aqua Blue for accents */
 
-  --accent-foreground: 210 20% 98%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 72% 45%;
 
-  --destructive-foreground: 0 72% 98%;
+  --destructive-foreground: 0 0% 100%;
 
-  --input: 220 25% 20%;
-  --ring: 203 89% 44%;
-  --chart-1: 203 89% 44%;
-  --chart-2: 189 98% 38%;
-  --chart-3: 216 88% 29%;
+  --input: 0 0% 88%;
+  --ring: 203 73% 44%;
+  --chart-1: 203 73% 44%;
+  --chart-2: 189 100% 38%;
+  --chart-3: 216 89% 29%;
   --chart-4: 203 45% 60%;
   --chart-5: 216 60% 50%;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --radius: .75rem; /* 12px for premium feel */
-  --shadow-2xs: 0px 1px 2px 0px hsl(220 40% 3% / 0.4);
-  --shadow-xs: 0px 1px 3px 0px hsl(220 40% 3% / 0.5);
-  --shadow-sm: 0px 2px 4px 0px hsl(220 40% 3% / 0.4), 0px 1px 2px -1px hsl(220 40% 3% / 0.5);
-  --shadow: 0px 4px 8px -1px hsl(220 40% 3% / 0.6), 0px 2px 4px -1px hsl(220 40% 3% / 0.4);
-  --shadow-md: 0px 6px 16px -2px hsl(220 40% 3% / 0.7), 0px 3px 6px -2px hsl(220 40% 3% / 0.5);
-  --shadow-lg: 0px 10px 24px -4px hsl(220 40% 3% / 0.8), 0px 4px 8px -2px hsl(220 40% 3% / 0.6);
-  --shadow-xl: 0px 20px 32px -6px hsl(220 40% 3% / 0.9), 0px 8px 16px -4px hsl(220 40% 3% / 0.7);
-  --shadow-2xl: 0px 25px 50px -12px hsl(220 40% 3% / 1);
+  --radius: .5rem; /* 8px for clean feel */
+  --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-xs: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0px 2px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 2px -1px rgba(0, 0, 0, 0.08);
+  --shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0px 6px 16px -2px rgba(0, 0, 0, 0.12), 0px 3px 6px -2px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 10px 24px -4px rgba(0, 0, 0, 0.15), 0px 4px 8px -2px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0px 20px 32px -6px rgba(0, 0, 0, 0.18), 0px 8px 16px -4px rgba(0, 0, 0, 0.12);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -137,14 +137,14 @@
   }
 }
 
-/* Premium accent glow effect */
+/* Light theme utilities */
 @layer utilities {
   .accent-glow {
-    box-shadow: 0 0 20px rgba(0, 159, 194, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 159, 194, 0.1);
   }
 
   .accent-glow-hover:hover {
-    box-shadow: 0 0 30px rgba(0, 159, 194, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 159, 194, 0.15);
   }
 
   .accent-border-left {
