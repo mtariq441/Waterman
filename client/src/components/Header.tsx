@@ -72,7 +72,7 @@ export default function Header() {
             <div className="flex items-center flex-shrink-0">
               <button 
                 onClick={() => scrollToSection("home")}
-                className="focus:outline-none focus:ring-2 focus:ring-[#009FC2] rounded-md"
+                className="focus:outline-none"
                 data-testid="logo-button"
               >
                 <img 
