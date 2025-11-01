@@ -48,8 +48,10 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="relative py-20 sm:py-24 lg:py-32 overflow-hidden" data-testid="section-services">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
+    <section id="services" className="relative py-20 sm:py-24 lg:py-32 overflow-hidden premium-section-bg" data-testid="section-services">
+      <div className="absolute inset-0 watermark-pattern"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#009FC2]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#1E73BE]/5 to-transparent rounded-full blur-3xl"></div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 lg:mb-20">
@@ -80,12 +82,13 @@ export default function ServicesSection() {
             return (
               <Card
                 key={index}
-                className="group relative bg-white border-0 hover:shadow-2xl transition-all duration-500 overflow-hidden rounded-3xl premium-shadow hover:scale-105"
+                className="group relative premium-card border-0 hover:shadow-2xl transition-all duration-500 overflow-hidden rounded-3xl hover:scale-105"
                 data-testid={`card-service-${index}`}
               >
-                <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${service.gradient}`}></div>
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient}`}></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <CardHeader className="pb-4 pt-8">
+                <CardHeader className="relative pb-4 pt-8">
                   <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <Icon className="h-8 w-8 text-white" />
                   </div>
@@ -94,7 +97,7 @@ export default function ServicesSection() {
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
+                <CardContent className="relative space-y-6">
                   <p className="text-gray-600 text-base leading-relaxed">
                     {service.description}
                   </p>
@@ -109,8 +112,6 @@ export default function ServicesSection() {
                     <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
-
-                <div className="absolute inset-0 bg-gradient-to-br from-[#009FC2]/0 via-transparent to-[#1E73BE]/0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
               </Card>
             );
           })}

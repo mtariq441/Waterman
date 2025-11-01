@@ -77,38 +77,38 @@ export default function HeroSection() {
             </div>
 
             <div className="lg:col-span-5 grid gap-4">
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group">
+              <div className="premium-glass rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group hover:scale-105">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#009FC2]/20 p-3 rounded-2xl group-hover:scale-110 transition-transform">
-                    <Clock className="h-6 w-6 lg:h-8 lg:w-8 text-[#009FC2]" />
+                  <div className="bg-gradient-to-br from-[#009FC2] to-[#1E73BE] p-3 rounded-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    <Clock className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg lg:text-xl mb-2">37+ Years</h3>
-                    <p className="text-white/80 text-sm lg:text-base">Of trusted service in Brevard County</p>
+                    <p className="text-white/90 text-sm lg:text-base">Of trusted service in Brevard County</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group">
+              <div className="premium-glass rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group hover:scale-105">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#009FC2]/20 p-3 rounded-2xl group-hover:scale-110 transition-transform">
-                    <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-[#009FC2]" />
+                  <div className="bg-gradient-to-br from-[#1E73BE] to-[#0B3C88] p-3 rounded-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg lg:text-xl mb-2">Best Prices</h3>
-                    <p className="text-white/80 text-sm lg:text-base">Why pay more for quality?</p>
+                    <p className="text-white/90 text-sm lg:text-base">Why pay more for quality?</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group">
+              <div className="premium-glass rounded-3xl p-6 lg:p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group hover:scale-105">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#009FC2]/20 p-3 rounded-2xl group-hover:scale-110 transition-transform">
-                    <Award className="h-6 w-6 lg:h-8 lg:w-8 text-[#009FC2]" />
+                  <div className="bg-gradient-to-br from-[#0B3C88] to-[#009FC2] p-3 rounded-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    <Award className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg lg:text-xl mb-2">Certified</h3>
-                    <p className="text-white/80 text-sm lg:text-base">BBB Accredited since 2002</p>
+                    <p className="text-white/90 text-sm lg:text-base">BBB Accredited since 2002</p>
                   </div>
                 </div>
               </div>

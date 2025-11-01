@@ -42,7 +42,10 @@ export default function WhatWeRemoveSection() {
 
   return (
     <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden" data-testid="section-remove">
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-gray-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C88]/[0.02] via-white to-[#009FC2]/[0.02]"></div>
+      <div className="absolute inset-0 watermark-pattern"></div>
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-l from-[#009FC2]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#1E73BE]/5 to-transparent rounded-full blur-3xl"></div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 lg:mb-20">
@@ -76,15 +79,15 @@ export default function WhatWeRemoveSection() {
                 className="group relative"
                 data-testid={`contaminant-${index}`}
               >
-                <div className={`relative flex flex-col items-center gap-4 p-6 lg:p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-[#009FC2]/30 transition-all duration-300 hover:scale-110 premium-shadow hover:shadow-2xl ${item.bgColor} hover:bg-white`}>
+                <div className="relative flex flex-col items-center gap-4 p-6 lg:p-8 rounded-3xl premium-card hover:border-[#009FC2]/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl">
                   <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
                   </div>
-                  <span className="text-sm lg:text-base font-bold text-center text-[#0B3C88]">
+                  <span className="text-sm lg:text-base font-bold text-center text-[#0B3C88] group-hover:text-[#009FC2] transition-colors">
                     {item.name}
                   </span>
 
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#009FC2]/0 via-transparent to-[#1E73BE]/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#009FC2]/5 via-transparent to-[#1E73BE]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               </div>
             );

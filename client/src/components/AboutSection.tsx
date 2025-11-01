@@ -29,9 +29,10 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden" data-testid="section-about">
-      <div className="absolute inset-0 bg-white"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,159,194,0.05),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(11,60,136,0.05),transparent_50%)]"></div>
+    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden premium-section-bg" data-testid="section-about">
+      <div className="absolute inset-0 watermark-pattern"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-bl from-[#009FC2]/[0.08] to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-[#1E73BE]/[0.08] to-transparent rounded-full blur-3xl"></div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -67,7 +68,7 @@ export default function AboutSection() {
               return (
                 <div
                   key={index}
-                  className="group relative text-center p-8 lg:p-10 rounded-3xl bg-white border-2 border-gray-100 hover:border-[#009FC2]/30 transition-all duration-300 hover:scale-105 premium-shadow hover:shadow-2xl"
+                  className="group relative text-center p-8 lg:p-10 rounded-3xl premium-card transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                   data-testid={`feature-${index}`}
                 >
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300`}>
@@ -82,7 +83,7 @@ export default function AboutSection() {
                     {feature.description}
                   </p>
 
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#009FC2]/0 via-transparent to-[#1E73BE]/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#009FC2]/5 via-transparent to-[#1E73BE]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               );
             })}
