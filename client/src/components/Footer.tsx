@@ -1,4 +1,4 @@
-import logoImage from "@assets/image_1762003849957.png";
+import logoImage from "@assets/The Water Man 6-1@500x_1762018047364.png";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export default function Footer() {
