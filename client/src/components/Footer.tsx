@@ -1,4 +1,5 @@
 import logoImage from "@assets/image_1762003849957.png";
+import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,85 +12,149 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#005F9E] text-white py-10 sm:py-12 md:py-14 border-t border-white/10" data-testid="footer">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-10">
-          <div className="flex flex-col items-start">
-            <img 
-              src={logoImage} 
-              alt="The Waterman Logo" 
-              className="h-28 sm:h-32 md:h-36 w-auto object-contain mb-4 rounded-lg shadow-lg border-2 border-white/30 bg-white/5 p-1"
-              data-testid="logo-footer"
-            />
-            <p className="text-white/80 text-sm sm:text-base">
+    <footer className="relative bg-gradient-to-br from-[#0B3C88] via-[#005F9E] to-[#009FC2] text-white overflow-hidden" data-testid="footer">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,159,194,0.2),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(30,115,190,0.2),transparent_50%)]"></div>
+      
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+          <div className="flex flex-col items-start lg:col-span-1">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-4 mb-6 shadow-2xl">
+              <img 
+                src={logoImage} 
+                alt="The Waterman Logo" 
+                className="h-32 w-auto object-contain"
+                data-testid="logo-footer"
+              />
+            </div>
+            <p className="text-white/90 text-base leading-relaxed mb-6">
               Serving Brevard County with quality water treatment systems since 1987.
             </p>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="group flex items-center gap-2 text-white font-semibold hover:text-[#009FC2] transition-colors"
+            >
+              Get Free Analysis
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 sm:mb-5 text-base sm:text-lg text-white">Quick Links</h4>
-            <nav className="space-y-2 sm:space-y-3">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="block text-white/80 hover-elevate px-2 py-1 rounded-md text-sm sm:text-base transition-colors hover:text-white"
-                data-testid="footer-link-home"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="block text-white/80 hover-elevate px-2 py-1 rounded-md text-sm sm:text-base transition-colors hover:text-white"
-                data-testid="footer-link-services"
-              >
-                Water Treatment
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="block text-white/80 hover-elevate px-2 py-1 rounded-md text-sm sm:text-base transition-colors hover:text-white"
-                data-testid="footer-link-location"
-              >
-                Location
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="block text-white/80 hover-elevate px-2 py-1 rounded-md text-sm sm:text-base transition-colors hover:text-white"
-                data-testid="footer-link-contact"
-              >
-                Contact
-              </button>
+            <h4 className="font-bold mb-6 text-lg text-white flex items-center gap-2">
+              <div className="h-1 w-8 bg-gradient-to-r from-[#009FC2] to-transparent rounded-full"></div>
+              Quick Links
+            </h4>
+            <nav className="space-y-3">
+              {[
+                { label: "Home", id: "home" },
+                { label: "Services", id: "services" },
+                { label: "About", id: "about" },
+                { label: "Contact", id: "contact" }
+              ].map((link, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSection(link.id)}
+                  className="group flex items-center gap-2 text-white/80 hover:text-white transition-colors text-base"
+                  data-testid={`footer-link-${link.id}`}
+                >
+                  <span className="w-0 group-hover:w-2 h-px bg-[#009FC2] transition-all duration-300"></span>
+                  {link.label}
+                </button>
+              ))}
             </nav>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 sm:mb-5 text-base sm:text-lg text-white">Contact</h4>
-            <div className="space-y-2 text-sm sm:text-base text-white/80">
-              <p>1155 Malabar Rd. NE, Suite 20</p>
-              <p>Palm Bay, FL 32907</p>
-              <p className="text-[#009FC2] font-semibold">(321) 951-1303</p>
-              <p className="break-all">thewaterman321@gmail.com</p>
+            <h4 className="font-bold mb-6 text-lg text-white flex items-center gap-2">
+              <div className="h-1 w-8 bg-gradient-to-r from-[#009FC2] to-transparent rounded-full"></div>
+              Contact
+            </h4>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-[#009FC2]" />
+                </div>
+                <div className="text-white/90 text-sm">
+                  <p>1155 Malabar Rd. NE, Suite 20</p>
+                  <p>Palm Bay, FL 32907</p>
+                </div>
+              </div>
+              
+              <a
+                href="tel:3219511303"
+                className="flex items-center gap-3 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-[#009FC2] transition-colors">
+                  <Phone className="h-5 w-5 text-[#009FC2] group-hover:text-white" />
+                </div>
+                <span className="text-white font-semibold group-hover:text-[#009FC2] transition-colors">
+                  (321) 951-1303
+                </span>
+              </a>
+              
+              <a
+                href="mailto:thewaterman321@gmail.com"
+                className="flex items-start gap-3 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-[#009FC2] transition-colors flex-shrink-0">
+                  <Mail className="h-5 w-5 text-[#009FC2] group-hover:text-white" />
+                </div>
+                <span className="text-white/90 text-sm break-all group-hover:text-white transition-colors">
+                  thewaterman321@gmail.com
+                </span>
+              </a>
             </div>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 sm:mb-5 text-base sm:text-lg text-white">Hours</h4>
-            <div className="space-y-2 text-sm sm:text-base text-white/80">
-              <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
-              <p>Saturday: 9:00 AM - 2:00 PM</p>
-              <p>Sunday: Closed</p>
+            <h4 className="font-bold mb-6 text-lg text-white flex items-center gap-2">
+              <div className="h-1 w-8 bg-gradient-to-r from-[#009FC2] to-transparent rounded-full"></div>
+              Business Hours
+            </h4>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-5 w-5 text-[#009FC2]" />
+                </div>
+                <div className="text-white/90 text-sm space-y-1">
+                  <p className="flex justify-between gap-4">
+                    <span>Mon - Fri:</span>
+                    <span className="font-semibold text-white">8AM - 5PM</span>
+                  </p>
+                  <p className="flex justify-between gap-4">
+                    <span>Saturday:</span>
+                    <span className="font-semibold text-white">9AM - 2PM</span>
+                  </p>
+                  <p className="flex justify-between gap-4">
+                    <span>Sunday:</span>
+                    <span className="font-semibold text-white">Closed</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 sm:pt-8 text-center text-sm text-white/80">
-          <p>© {currentYear} The Waterman Inc. All rights reserved.</p>
-          <div className="mt-3 flex flex-wrap justify-center items-center gap-3">
-            <button className="hover-elevate px-2 py-1 rounded-md hover:text-white transition-colors" data-testid="footer-link-terms">
-              Terms of Use
-            </button>
-            <span className="text-white/40">|</span>
-            <button className="hover-elevate px-2 py-1 rounded-md hover:text-white transition-colors" data-testid="footer-link-privacy">
-              Privacy Policy
-            </button>
+        <div className="border-t border-white/20 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-white/80 text-sm">
+              © {currentYear} The Waterman Inc. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-4">
+              <button 
+                className="text-white/80 hover:text-white text-sm transition-colors" 
+                data-testid="footer-link-terms"
+              >
+                Terms of Use
+              </button>
+              <span className="text-white/40">•</span>
+              <button 
+                className="text-white/80 hover:text-white text-sm transition-colors" 
+                data-testid="footer-link-privacy"
+              >
+                Privacy Policy
+              </button>
+            </div>
           </div>
         </div>
       </div>
