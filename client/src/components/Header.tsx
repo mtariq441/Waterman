@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MapPin, Clock, Search } from "lucide-react";
-import logoImage from "@assets/image_1762003849957.png";
+import logoImage from "@assets/The Water Man 4_1@500x_1762016967209.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
