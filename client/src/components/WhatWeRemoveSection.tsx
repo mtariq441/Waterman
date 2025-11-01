@@ -2,39 +2,90 @@ import { Droplets, Flame, Wind, Stethoscope, Beaker, XCircle } from "lucide-reac
 
 export default function WhatWeRemoveSection() {
   const contaminants = [
-    { icon: Droplets, name: "Chlorine", color: "text-[#009FC2]" },
-    { icon: Flame, name: "Iron Rust", color: "text-[#1E73BE]" },
-    { icon: Wind, name: "Odor", color: "text-[#0B3C88]" },
-    { icon: Stethoscope, name: "Stains", color: "text-[#009FC2]" },
-    { icon: Beaker, name: "Tannic Acid", color: "text-[#1E73BE]" },
-    { icon: XCircle, name: "Deposits", color: "text-[#0B3C88]" }
+    { 
+      icon: Droplets, 
+      name: "Chlorine", 
+      gradient: "from-[#009FC2] to-[#1E73BE]",
+      bgColor: "bg-[#009FC2]/10"
+    },
+    { 
+      icon: Flame, 
+      name: "Iron Rust", 
+      gradient: "from-[#1E73BE] to-[#0B3C88]",
+      bgColor: "bg-[#1E73BE]/10"
+    },
+    { 
+      icon: Wind, 
+      name: "Odor", 
+      gradient: "from-[#0B3C88] to-[#005F9E]",
+      bgColor: "bg-[#0B3C88]/10"
+    },
+    { 
+      icon: Stethoscope, 
+      name: "Stains", 
+      gradient: "from-[#009FC2] to-[#008AB0]",
+      bgColor: "bg-[#009FC2]/10"
+    },
+    { 
+      icon: Beaker, 
+      name: "Tannic Acid", 
+      gradient: "from-[#1E73BE] to-[#009FC2]",
+      bgColor: "bg-[#1E73BE]/10"
+    },
+    { 
+      icon: XCircle, 
+      name: "Deposits", 
+      gradient: "from-[#0B3C88] to-[#1E73BE]",
+      bgColor: "bg-[#0B3C88]/10"
+    }
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-muted/30" data-testid="section-remove">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4" data-testid="text-remove-title">
-            WHAT WE <span className="text-accent">REMOVE</span>
+    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden" data-testid="section-remove">
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-gray-50"></div>
+      
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 bg-[#009FC2]/10 px-4 py-2 rounded-full mb-6">
+            <span className="text-[#009FC2] text-sm font-semibold tracking-wide uppercase">
+              Water Purification
+            </span>
+          </div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#0B3C88] mb-6 tracking-tight" data-testid="text-remove-title">
+            WHAT WE
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009FC2] to-[#1E73BE]">
+              REMOVE
+            </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+          
+          <div className="h-1 w-24 bg-gradient-to-r from-[#009FC2] to-transparent rounded-full mx-auto mb-6"></div>
+          
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our advanced water treatment systems eliminate harmful contaminants
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {contaminants.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 p-4 sm:p-5 md:p-6 rounded-md bg-card border border-border hover-elevate accent-glow-hover transition-all duration-300"
+                className="group relative"
                 data-testid={`contaminant-${index}`}
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 rounded-full bg-background flex items-center justify-center">
-                  <Icon className={`h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 ${item.color}`} />
+                <div className={`relative flex flex-col items-center gap-4 p-6 lg:p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-[#009FC2]/30 transition-all duration-300 hover:scale-110 premium-shadow hover:shadow-2xl ${item.bgColor} hover:bg-white`}>
+                  <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
+                  </div>
+                  <span className="text-sm lg:text-base font-bold text-center text-[#0B3C88]">
+                    {item.name}
+                  </span>
+
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#009FC2]/0 via-transparent to-[#1E73BE]/0 opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
-                <span className="text-xs sm:text-sm md:text-base font-semibold text-center text-foreground">{item.name}</span>
               </div>
             );
           })}

@@ -1,88 +1,130 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Droplet, Container, Wind, Filter, Waves, Zap } from "lucide-react";
+import { Droplet, Container, Wind, Filter, Waves, Zap, ArrowRight } from "lucide-react";
 
 export default function ServicesSection() {
   const services = [
     {
       icon: Droplet,
       title: "Water Softeners",
-      description: "Remove hard water minerals for softer, cleaner water throughout your home."
+      description: "Remove hard water minerals for softer, cleaner water throughout your home.",
+      gradient: "from-[#009FC2] to-[#1E73BE]"
     },
     {
       icon: Container,
       title: "Pressure Tanks",
-      description: "Maintain consistent water pressure and protect your plumbing system."
+      description: "Maintain consistent water pressure and protect your plumbing system.",
+      gradient: "from-[#1E73BE] to-[#0B3C88]"
     },
     {
       icon: Wind,
       title: "Air Induction Oxidizers",
-      description: "Remove iron, sulfur, and manganese from your water naturally."
+      description: "Remove iron, sulfur, and manganese from your water naturally.",
+      gradient: "from-[#009FC2] to-[#005F9E]"
     },
     {
       icon: Filter,
       title: "Reverse Osmosis Systems",
-      description: "Ultimate water purification for drinking water at your tap."
+      description: "Ultimate water purification for drinking water at your tap.",
+      gradient: "from-[#1E73BE] to-[#009FC2]"
     },
     {
       icon: Waves,
       title: "Pool Supplies",
-      description: "Complete selection of pool maintenance products and chemicals."
+      description: "Complete selection of pool maintenance products and chemicals.",
+      gradient: "from-[#0B3C88] to-[#1E73BE]"
     },
     {
       icon: Zap,
       title: "Chlorine Refills",
-      description: "Convenient chlorine refill service for water treatment systems."
+      description: "Convenient chlorine refill service for water treatment systems.",
+      gradient: "from-[#005F9E] to-[#009FC2]"
     }
   ];
 
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background" data-testid="section-services">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 sm:mb-4" data-testid="text-services-title">
-            OUR WATER TREATMENT <span className="text-accent">SERVICES</span>
+    <section id="services" className="relative py-20 sm:py-24 lg:py-32 overflow-hidden" data-testid="section-services">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
+      
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 bg-[#009FC2]/10 px-4 py-2 rounded-full mb-6">
+            <span className="text-[#009FC2] text-sm font-semibold tracking-wide uppercase">
+              Premium Solutions
+            </span>
+          </div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#0B3C88] mb-6 tracking-tight" data-testid="text-services-title">
+            OUR WATER TREATMENT
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009FC2] to-[#1E73BE]">
+              SERVICES
+            </span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+          
+          <div className="h-1 w-24 bg-gradient-to-r from-[#009FC2] to-transparent rounded-full mx-auto mb-6"></div>
+          
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Professional water treatment solutions tailored to your needs
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card
                 key={index}
-                className="bg-card border-l-4 border-accent hover-elevate accent-glow-hover transition-all duration-300 overflow-hidden"
+                className="group relative bg-white border-0 hover:shadow-2xl transition-all duration-500 overflow-hidden rounded-3xl premium-shadow hover:scale-105"
                 data-testid={`card-service-${index}`}
               >
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-md bg-accent/10 flex items-center justify-center mb-3 sm:mb-4">
-                    <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-accent" />
+                <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${service.gradient}`}></div>
+                
+                <CardHeader className="pb-4 pt-8">
+                  <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl sm:text-2xl text-foreground">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-[#0B3C88] group-hover:text-[#009FC2] transition-colors">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-5">
+                
+                <CardContent className="space-y-6">
+                  <p className="text-gray-600 text-base leading-relaxed">
                     {service.description}
-                  </CardDescription>
+                  </p>
+                  
                   <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => {
-                      const element = document.getElementById("contact");
-                      if (element) element.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="w-full sm:w-auto border-accent text-accent hover:bg-accent/10"
+                    variant="ghost"
+                    onClick={scrollToContact}
+                    className="group/btn w-full justify-between text-[#009FC2] hover:text-[#008AB0] hover:bg-[#009FC2]/5 font-semibold p-0 h-auto"
                     data-testid={`button-learn-more-${index}`}
                   >
-                    Learn More
+                    <span>Learn More</span>
+                    <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
+
+                <div className="absolute inset-0 bg-gradient-to-br from-[#009FC2]/0 via-transparent to-[#1E73BE]/0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
               </Card>
             );
           })}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button
+            size="lg"
+            onClick={scrollToContact}
+            className="bg-[#009FC2] hover:bg-[#008AB0] text-white text-lg px-10 h-14 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+          >
+            Get Your Free Water Analysis
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>
