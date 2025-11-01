@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Clock, Phone, Mail, Send } from "lucide-react";
-import mapImage from "@assets/image_1761917346217.png";
 
 export default function ContactSection() {
   const { toast } = useToast();
@@ -136,20 +135,22 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <a 
-              href="https://www.google.com/maps/place/1155+Malabar+Rd+NE+%2320,+Palm+Bay,+FL+32907" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block aspect-video rounded-3xl overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              data-testid="map-link"
+            <div 
+              className="aspect-video rounded-3xl overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300"
+              data-testid="map-container"
             >
-              <img 
-                src={mapImage} 
-                alt="Map showing The Waterman location in Palm Bay, FL" 
-                className="w-full h-full object-cover"
-                data-testid="map-image"
+              <iframe
+                src="https://maps.google.com/maps?q=1155+Malabar+Rd+NE+Suite+20,+Palm+Bay,+FL+32907&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="The Waterman location in Palm Bay, FL 32907"
+                data-testid="map-iframe"
               />
-            </a>
+            </div>
           </div>
 
           <Card className="lg:col-span-3 bg-white border-0 rounded-3xl premium-shadow-lg">
