@@ -1,4 +1,4 @@
-import logoImage from "@assets/04bfc6f4-66d6-4271-b314-ef785abe3663_1762003519635.jpg";
+import logoImage from "@assets/image_1762003849957.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +18,7 @@ export default function Footer() {
             <img 
               src={logoImage} 
               alt="The Waterman Logo" 
-              className="h-24 sm:h-28 md:h-32 w-auto object-contain mb-4 bg-white rounded-lg p-2"
+              className="h-28 sm:h-32 md:h-36 w-auto object-contain mb-4 rounded-lg shadow-lg border-2 border-white/30 bg-white/5 p-1"
               data-testid="logo-footer"
             />
             <p className="text-white/80 text-sm sm:text-base">

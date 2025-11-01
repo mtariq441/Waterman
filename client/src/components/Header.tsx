@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MapPin, Clock, Search } from "lucide-react";
-import logoImage from "@assets/04bfc6f4-66d6-4271-b314-ef785abe3663_1762003519635.jpg";
+import logoImage from "@assets/image_1762003849957.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,7 +78,7 @@ export default function Header() {
                 <img 
                   src={logoImage} 
                   alt="The Waterman Logo" 
-                  className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto object-contain hover:opacity-90 transition-opacity"
+                  className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain hover:opacity-90 transition-opacity rounded-lg shadow-lg border border-white/20"
                   data-testid="logo-header"
                 />
               </button>
